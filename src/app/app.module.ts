@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GhSearchComponent } from './Components/gh-search/gh-search.component';
 import { GhFormComponent } from './Components/gh-form/gh-form.component';
+import { GhUserComponent } from './Components/gh-user/gh-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GhSearchComponent,
-    GhFormComponent
+    GhFormComponent,
+    GhUserComponent
   ],
   imports: [
     BrowserModule,
