@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GhFooterComponent } from './gh-footer.component';
+import { PFooterComponent } from './p-footer.component';
 
-describe('GhFooterComponent', () => {
-  let component: GhFooterComponent;
-  let fixture: ComponentFixture<GhFooterComponent>;
+describe('PFooterComponent', () => {
+  let component: PFooterComponent;
+  let fixture: ComponentFixture<PFooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GhFooterComponent ]
+      declarations: [ PFooterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GhFooterComponent);
+    fixture = TestBed.createComponent(PFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
