@@ -7,6 +7,7 @@ import { GhSearchComponent } from './Components/gh-search/gh-search.component';
 import { GhFormComponent } from './Components/gh-form/gh-form.component';
 import { GhUserComponent } from './Components/gh-user/gh-user.component';
 import { GhRepoComponent } from './Components/gh-repo/gh-repo.component';
+import { GhFooterComponent } from './Components/gh-footer/gh-footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GhRepoComponent } from './Components/gh-repo/gh-repo.component';
     GhSearchComponent,
     GhFormComponent,
     GhUserComponent,
-    GhRepoComponent
+    GhRepoComponent,
+    GhFooterComponent
   ],
   imports: [
     BrowserModule,
