@@ -5,7 +5,13 @@
 body{
     margin: auto, 0;
     color: white;
+    width: 70%;
+    margin: auto;
+    /* justify-content: center; */
     background-image: url("../assets/gitbckgrnd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 h1{
