@@ -1,4 +1,4 @@
-<!-- <div class="container">
+<div class="container">
     <div class="row">
         <div class="col-l-6">
             <img src="" alt="">
@@ -13,6 +13,7 @@
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-md-4">
+                        <h3 class="panel-title text-center">{{ user.login }}</h3>
                         <img
                           class="img-thumbnail github-avatar"
                           src="{{ user.avatar_url }}"
@@ -23,41 +24,31 @@
                           class="stats d-flex flex-column justify-content-evenly align-content-center"
                         >
                           <div>
+                            <span>Public Repos: </span>
                             <span class="label label-default fw-bold text-info"
                               >{{ user.public_repos }}
                             </span>
-                            <span>Public Repos</span>
+                            
                           </div>
                           <div>
+                            <span>Followers: </span>
                             <span class="label label-success fw-bold text-info"
                               >{{ user.followers }}
                             </span>
-                            <span>Followers</span>
+                            
                           </div>
                           <div>
+                            <span>Following: </span>
                             <span class="label label-info fw-bold text-info"
                               >{{ user.following }}
                             </span>
-                            <span>Following</span>
-                          </div>
-                          <div>
-                            <span>Location: </span>
-                            <span class="label label-info fw-bold text-info"
-                              >{{ user.location }}
-                            </span>
+                            
                           </div>
                           <div>
                             <span>Member since: </span>
                             <span class="label label-info fw-bold text-info"
                               >{{ user.created_at | date: "mediumDate" }}
                             </span>
-                            <div>
-                              <span>Website: </span>
-                              <span class="label label-info fw-bold text-info"
-                                ><a href="{{user.blog}}"> {{ user.blog | shortenStr }}</a>
-            
-                              </span>
-                            </div>
                           </div>
                         </div>
                         <br />
@@ -67,4 +58,4 @@
                 </div>
         </div>
     </div>
-</div> -->
+</div>

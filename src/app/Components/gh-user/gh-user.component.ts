@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+// import { SearchGithubService } from '../search-github.service';
+import { User } from 'src/app/Classes/user';
+
 
 @Component({
   selector: 'app-gh-user',
