@@ -8,6 +8,8 @@ import { GhFormComponent } from './Components/gh-form/gh-form.component';
 import { GhUserComponent } from './Components/gh-user/gh-user.component';
 import { GhRepoComponent } from './Components/gh-repo/gh-repo.component';
 import { PFooterComponent } from './Components/p-footer/p-footer.component';
+import { SearchGithubService } from './Services/search-github.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { PFooterComponent } from './Components/p-footer/p-footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SearchGithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
