@@ -1,41 +1,33 @@
 <div class="panel panel-default">
-    <div class="panel-heading">
+  <div class="panel-heading">
       <h3 class="panel-title text-center text-info">Repositories</h3>
-    </div>
-    <div class="panel-body">
-      <div class="row">
-        <div class="col-md-12">
-          <div *ngFor="let repository of repositories">
-            <div class="row">
-              <div class="col-md-9">
-                <h4>
-                  <a href="{{ repository.html_url }}" target="_blank">{{
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor="let repository of repo">
+          <div class="row">
+            <div class="col-md-9">
+              <h4>
+                <a href="{{ repository.html_url }}" target="_blank">{{
                     repository.name
                   }}</a>
-                </h4>
-                <p>{{ repository.description }}</p>
+              </h4>
+              <p>{{ repository.description }}</p>
+            </div>
+            <div class="col-md-3">
+              <div>
+                <span class="label label-default mx-2">{{ repository.watchers }} Watcher</span>
+                <span class="label label-primary mx-2"> Updated on: {{ repository.updated_at }} </span>
               </div>
-              <div class="col-md-3">
-                <div>
-                  <span class="label label-default mx-2"
-                    >{{ repository.watchers }} Watchers</span
-                  >
-        
-                  <span class="label label-primary mx-2"
-                    > Updated on: {{ repository.updated_at }} </span
-                  >
-                </div>
-
-                <div class="label label-primary mx-2">
-                  Created on: {{ repository.created_at | custom }}
-                </div>
+              <div class="label label-primary mx-2">
+                  Created on: {{ repository.created_at }}
               </div>
             </div>
-            <hr />
           </div>
+          <hr/>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

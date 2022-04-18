@@ -1,11 +1,16 @@
 <br><br>
-<div class="input-group mb-3 default-w-100 w-50 mx-auto rounded-3">
+
+<form (ngSubmit)='submitUsername()' #ghForm='ngForm' name="ghForm">
+  <div class="input-group mb-3 default-w-100 w-50 mx-auto rounded-3">
     <input
         id="searchInput"
       type="text"
       placeholder="Search for a Github user..."
       class="form-control d-flex justify-content-center text-center"
     />
+    <button type="submit" class="btn btn-primary text-center" style="align-items: center; justify-content: center;">Search</button>
 </div>
+<h5></h5>  
 
-<h5></h5>
+</form>
+
