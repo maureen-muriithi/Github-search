@@ -21,7 +21,7 @@
                 <span class="label label-primary mx-2"> Updated on: {{ repository.updated_at }} </span>
               </div>
               <div class="label label-primary mx-2">
-                  Created on: {{ repository.created_at }}
+                  Created on: {{ repository.created_at | dateCheck }}
               </div>
             </div>
           </div>

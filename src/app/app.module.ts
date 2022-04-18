@@ -10,7 +10,8 @@ import { GhUserComponent } from './Components/gh-user/gh-user.component';
 import { GhRepoComponent } from './Components/gh-repo/gh-repo.component';
 import { PFooterComponent } from './Components/p-footer/p-footer.component';
 import { SearchGithubService } from './Services/search-github.service';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { DateCheckPipe } from './date-check.pipe'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http'
     GhFormComponent,
     GhUserComponent,
     GhRepoComponent,
-    PFooterComponent
+    PFooterComponent,
+    DateCheckPipe
   ],
   imports: [
     BrowserModule,
