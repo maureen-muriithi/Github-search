@@ -24,6 +24,7 @@ export class GhRepoComponent implements OnInit {
        console.log(error)
      });
   }
+  
   ngOnInit(): void {
     this.submitUser("Maureen-muriithi");
   }

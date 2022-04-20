@@ -12,14 +12,14 @@ import { NgModule } from '@angular/core';
 })
 export class GhFormComponent implements OnInit {
 
-  public ghForm!: string;
+  public findUser!: string;
   @Output() searchResult = new EventEmitter<any>() 
 
   constructor() { }
 
 
   submitUser(){
-    this.searchResult.emit(this.ghForm);
+    this.searchResult.emit(this.findUser);
     console.log('submited')
   }
   ngOnInit(): void {
