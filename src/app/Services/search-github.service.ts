@@ -23,7 +23,7 @@ export class SearchGithubService {
 
     httpOptions={
           headers:new HttpHeaders({
-            Authorization:`token ${environment.githubApiToken}`
+            Authorization:`token ${environment.let}`
           })
         }
 
@@ -38,7 +38,7 @@ export class SearchGithubService {
         public_repos:number;
     }
 
-    let userUrl = 'https://api.github.com/users/'+username+'?order=created&sort=asc?access_token='+environment.githubApiToken;
+    let userUrl = 'https://api.github.com/users/'+username+'?order=created&sort=asc?access_token='+environment.let;
 
     let promise = new Promise<void>((resolve,reject) =>{
       this.http.get<ApiResponse>(userUrl).toPromise().then(response => {
@@ -70,7 +70,7 @@ export class SearchGithubService {
       // const url = `https://api.github.com/users/${userName}/repos`;
       // return this.http.get<any>(url, httpOptions);
 
-      let repoUrl = 'https://api.github.com/users/'+username+"/repos?order=created&sort=asc?access_token="+environment.githubApiToken
+      let repoUrl = 'https://api.github.com/users/'+username+"/repos?order=created&sort=asc?access_token="+environment.let
       
       let promise = new Promise<void>((resolve,reject) =>{
         this.http.get<ApiResponse>(repoUrl).toPromise().then(response => {
