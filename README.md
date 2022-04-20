@@ -1,27 +1,61 @@
-# GithubSearch
+### Github-Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+> A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories.
 
-## Development server
+> Live demo [ ]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Project Contributor
 
-## Code scaffolding
+> Maureen Muriithi
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Table of Contents
 
-## Build
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Known Bugs](#known-bugs)
+- [Setup/Requirements](#setup/requirements)
+- [Running Unit Tests](#running-unit-tests)
+- [Running end-to-end tests](#running-end-to-end-tests)
+- [Contact](#contact)
+- [License](#license)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### General Information
+A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories.
 
-## Running unit tests
+#### Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Angular
+- Bootstrap
+- jQuery
+- Browsers
+
+#### Known Bugs
+
+I have no any known bugs.
+
+#### Setup Requirements / Installation
+- A lapto, tab or phone
+- click this link and open it with your preferred browser
+- Input your github user name/repo, or any github user name/repo
+- Search
+- Receive their user profile and repositories.
+
+#### Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+#### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+#### Contact
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Created by [@maureen-muriithi] (moh2wanja@gmail.com) - feel free to contact me!
+
+#### License
+
+This project is open source and available under the [MIT License] (Copyright (c) 2022 Maureen Muriithi
+
