@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://api.github.com/users',
-  BASE_URL2: 'https://api.github.com/users/repos',
-  githubApiToken: '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',
+  githubApiToken: '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',
 };
 
 /*
