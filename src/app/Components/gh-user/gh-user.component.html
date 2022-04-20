@@ -12,7 +12,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-md-4">
-              <h3 class="panel-title text-center">{{ user.login }}</h3>
+              <h4 class="panel-title text-center">{{ user.login }}</h4>
               <img
                 class="img-thumbnail github-avatar"
                 src="{{ user.avatar_url }}"
@@ -45,15 +45,17 @@
                   </span>
                 </div>
               </div>
-              <br />
+              <br/>
+              <hr style="background-color: blue;">
             </div>
           </div>
         </div>
       </div>
 
-      <!-- <div class="panel panel-default">
+      <br><br><br>
+      <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title text-center text-info">Repos</h3>
+          <h3 id="repo" class="panel-title text-center">Repostories</h3>
         </div>
         <div class="panel-body">
           <div class="row">
@@ -62,35 +64,32 @@
                 <div class="row">
                   <div class="col-md-9">
                     <h4>
-                      <a href="{{ repo.html_url }}" target="_blank">{{
+                      <a id="reponame" href="{{ repo.html_url }}" target="_blank">{{
                         repo.name
                       }}</a>
                     </h4>
-                    <p>{{ repo.description }}</p>
+                    <p id="description" >{{ repo.description }}</p>
                   </div>
                   <div class="col-md-3">
                     <div>
                       <span class="label label-default mx-2"
                         >Watchers: {{ repo.watchers }}</span
                       >
-                      <span class="label label-primary mx-2"
-                        >Forks: {{ repo.updated_at }} </span
-                      >
+                      <br>
+                      <span class="label label-primary mx-2"> Updated on: {{ repo.created_at| date }} </span>
                     </div>
-                    <div class="label label-primary mx-2">
-                      Language: {{ repo.language }}
-                    </div>
-
-                    <div class="label label-primary mx-2">
-                      Created on: {{ repo.created_at }}
-                    </div>
+                    <div  class="label label-primary mx-2">
+                      Language: <span appHighlight> {{ repo.language }} </span>
+                      <br>
+                      Created: {{ repo.updated_at | dateCheck }}
+                  </div>
                   </div>
                 </div>
-                <hr />
+                <hr style="background-color: blue; height: 3px;"/>
               </div>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
 </div>

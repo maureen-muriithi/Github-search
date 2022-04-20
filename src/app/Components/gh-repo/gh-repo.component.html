@@ -1,36 +1,38 @@
-<div class="panel panel-default">
+<!-- <div class="panel panel-default">
   <div class="panel-heading">
       <h3 class="panel-title text-center ">Repositories</h3>
   </div>
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        <div *ngFor="let repo of repos">
-          <div class="row">
-            <div class="col-md-9">
-              <h4>
-                <a id="reponame" href="{{ repo.html_url }}" target="_blank">{{
-                    repo.name
-                  }}</a>
-              </h4>
-              <p id="description" >{{ repo.description }}</p>
-            </div>
-            <div class="col-md-3">
-              <div>
-                <span class="label label-default mx-2"> Watchers: {{ repo.watchers }}</span>
-                <br>
-                <span class="label label-primary mx-2"> Updated on: {{ repo.created_at| date }} </span>
+        <div *ngIf="repos">
+          <div *ngFor="let repo of repos">
+            <div class="row">
+              <div class="col-md-9">
+                <h4>
+                  <a id="reponame" href="{{ repo.html_url }}" target="_blank">{{
+                      repo.name
+                    }}</a>
+                </h4>
+                <p id="description" >{{ repo.description }}</p>
               </div>
-              <div  class="label label-primary mx-2">
-                   Language: <span appHighlight> {{ repo.language }} </span>
+              <div class="col-md-3">
+                <div>
+                  <span class="label label-default mx-2"> Watchers: {{ repo.watchers }}</span>
                   <br>
-                  Created: {{ repo.updated_at | dateCheck }}
+                  <span class="label label-primary mx-2"> Updated on: {{ repo.created_at| date }} </span>
+                </div>
+                <div  class="label label-primary mx-2">
+                    Language: <span appHighlight> {{ repo.language }} </span>
+                    <br>
+                    Created: {{ repo.updated_at | dateCheck }}
+                </div>
               </div>
             </div>
+            <hr/>
           </div>
-          <hr/>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div> -->

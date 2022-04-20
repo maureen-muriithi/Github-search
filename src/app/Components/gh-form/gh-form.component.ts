@@ -20,7 +20,6 @@ export class GhFormComponent implements OnInit {
 
   submitUser(){
     this.searchResult.emit(this.findUser);
-    console.log('submited')
   }
   ngOnInit(): void {
   }

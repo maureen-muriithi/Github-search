@@ -11,7 +11,7 @@ import { SearchGithubService } from 'src/app/Services/search-github.service';
 export class GhRepoComponent implements OnInit {
 
   user!: Username;
-  repos:any;
+  repos!:any;
 
 
   constructor(public ApiService: SearchGithubService) { }
@@ -24,7 +24,6 @@ export class GhRepoComponent implements OnInit {
        console.log(error)
      });
   }
-  
   ngOnInit(): void {
     this.submitUser("Maureen-muriithi");
   }

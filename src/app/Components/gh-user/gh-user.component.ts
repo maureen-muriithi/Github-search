@@ -27,6 +27,7 @@ export class GhUserComponent implements OnInit {
     });
     this.ApiService.getUserRepo(username).then((success)=>{
      this.repos = this.ApiService.repos;
+
     },
     (error)=>{
       console.log(error)
