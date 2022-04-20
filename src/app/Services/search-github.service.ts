@@ -67,6 +67,9 @@ export class SearchGithubService {
         updated_at:Date,
       }
      
+      // const url = `https://api.github.com/users/${userName}/repos`;
+      // return this.http.get<any>(url, httpOptions);
+
       let repoUrl = 'https://api.github.com/users/'+username+"/repos?order=created&sort=asc?access_token="+environment.githubApiToken
       
       let promise = new Promise<void>((resolve,reject) =>{
