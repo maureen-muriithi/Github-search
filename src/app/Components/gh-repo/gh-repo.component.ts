@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/Classes/user';
-import { Repository } from 'src/app/Classes/repository';
+import { Username } from 'src/app/Classes/username';
+import { Repo } from 'src/app/Classes/repo';
 import { SearchGithubService } from 'src/app/Services/search-github.service';
 
 @Component({
@@ -10,24 +10,22 @@ import { SearchGithubService } from 'src/app/Services/search-github.service';
 })
 export class GhRepoComponent implements OnInit {
 
-  user!: User;
-  repo :any;
+  user!: Username;
+  repos:any;
 
 
-  constructor(public SearchGithubService: SearchGithubService) { }
+  constructor(public ApiService: SearchGithubService) { }
 
-  searchUser(username:string){
-    this.SearchGithubService.getUserRepo(username).then((success)=>{
-      this.repo = this.SearchGithubService.repo;
+  submitUser(username:string){
+    this.ApiService.getUserRepo(username).then((success)=>{
+      this.repos = this.ApiService.repos;
      },
      (error)=>{
        console.log(error)
      });
-
   }
-
   ngOnInit(): void {
-    this.searchUser("Maureen-muriithi");
+    this.submitUser("Maureen-muriithi");
   }
 
 }

@@ -1,27 +1,30 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-      <h3 class="panel-title text-center text-info">Repositories</h3>
+      <h3 class="panel-title text-center ">Repositories</h3>
   </div>
   <div class="panel-body">
     <div class="row">
       <div class="col-md-12">
-        <div *ngFor="let repository of repo">
+        <div *ngFor="let repo of repos">
           <div class="row">
             <div class="col-md-9">
               <h4>
-                <a href="{{ repository.html_url }}" target="_blank">{{
-                    repository.name
+                <a id="reponame" href="{{ repo.html_url }}" target="_blank">{{
+                    repo.name
                   }}</a>
               </h4>
-              <p>{{ repository.description }}</p>
+              <p id="description" >{{ repo.description }}</p>
             </div>
             <div class="col-md-3">
               <div>
-                <span class="label label-default mx-2">{{ repository.watchers }} Watcher</span>
-                <span class="label label-primary mx-2"> Updated on: {{ repository.updated_at }} </span>
+                <span class="label label-default mx-2"> Watchers: {{ repo.watchers }}</span>
+                <br>
+                <span class="label label-primary mx-2"> Updated on: {{ repo.created_at| date }} </span>
               </div>
-              <div class="label label-primary mx-2">
-                  Created on: {{ repository.created_at | dateCheck }}
+              <div  class="label label-primary mx-2">
+                   Language: <span appHighlight> {{ repo.language }} </span>
+                  <br>
+                  Created: {{ repo.updated_at | dateCheck }}
               </div>
             </div>
           </div>

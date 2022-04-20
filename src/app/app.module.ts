@@ -11,7 +11,8 @@ import { GhRepoComponent } from './Components/gh-repo/gh-repo.component';
 import { PFooterComponent } from './Components/p-footer/p-footer.component';
 import { SearchGithubService } from './Services/search-github.service';
 import { HttpClientModule } from '@angular/common/http';
-import { DateCheckPipe } from './date-check.pipe'
+import { DateCheckPipe } from './date-check.pipe';
+import { HighlightDirective } from './Directives/highlight.directive'
 
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { DateCheckPipe } from './date-check.pipe'
     GhUserComponent,
     GhRepoComponent,
     PFooterComponent,
-    DateCheckPipe
+    DateCheckPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [SearchGithubService],
   bootstrap: [AppComponent]

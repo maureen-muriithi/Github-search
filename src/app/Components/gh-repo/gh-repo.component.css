@@ -1,0 +1,19 @@
+#description{
+    color: aqua;
+    font-style: italic;
+    font-size: larger;
+    font-weight: 400;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+
+}
+
+#reponame{
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+}

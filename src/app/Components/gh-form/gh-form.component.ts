@@ -1,9 +1,9 @@
 
-import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/Classes/user';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Username } from 'src/app/Classes/username';
+import { GhUserComponent } from '../gh-user/gh-user.component';
 import { SearchGithubService } from 'src/app/Services/search-github.service';
-import { NgForm } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-gh-form',
@@ -12,18 +12,16 @@ import { NgForm } from '@angular/forms';
 })
 export class GhFormComponent implements OnInit {
 
-  user!: User;
-	username!: string; 
-	searchGithubService!: SearchGithubService; 
+  public ghForm!: string;
+  @Output() searchResult = new EventEmitter<any>() 
 
-  submitUsername() {
-		this.searchGithubService.getUserData(this.username);
-	}
+  constructor() { }
 
-  constructor(searchGithubService:SearchGithubService) { 
-		this.searchGithubService = searchGithubService;
-	}
 
+  submitUser(){
+    this.searchResult.emit(this.ghForm);
+    console.log('submited')
+  }
   ngOnInit(): void {
   }
 

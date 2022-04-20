@@ -1,61 +1,96 @@
-<div class="container">
-    <div class="row">
-        <div class="col-l-6">
-            <img src="" alt="">
-        </div>
 
-        <div class="col-l-6">
-            <div *ngIf="user">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h3 class="panel-title text-center">{{ user.name }}</h3>
+<div class="container">
+  <app-gh-form (searchResult) = "submitUser($event)" ></app-gh-form>
+</div>
+
+<div class="profile-repo container bg-dark text-light w-100 rounded-3">
+    <div *ngIf="user">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center">{{ user.name }}</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-4">
+              <h3 class="panel-title text-center">{{ user.login }}</h3>
+              <img
+                class="img-thumbnail github-avatar"
+                src="{{ user.avatar_url }}"
+              />
+            </div>
+            <div class="col-md-8 d-flex m-auto lead">
+              <div class="stats d-flex flex-column justify-content-evenly align-content-center">
+                <div>
+                  <span>Public Repos: </span>
+                  <span class="label label-default fw-bold text-info"
+                    >{{ user.public_repos }}
+                  </span>
+                </div>
+                <div>
+                  <span>Followers: </span>
+                  <span class="label label-success fw-bold text-info"
+                    >{{ user.followers }}
+                  </span>
+                </div>
+                <div>
+                  <span>Following: </span>
+                  <span class="label label-info fw-bold text-info"
+                    >{{ user.following }}
+                  </span>
+                </div>
+                <div>
+                  <span>Member since: </span>
+                  <span class="label label-info fw-bold text-info"
+                    >{{ user.created_at | date }}
+                  </span>
+                </div>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title text-center text-info">Repos</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div *ngFor="let repo of repos">
+                <div class="row">
+                  <div class="col-md-9">
+                    <h4>
+                      <a href="{{ repo.html_url }}" target="_blank">{{
+                        repo.name
+                      }}</a>
+                    </h4>
+                    <p>{{ repo.description }}</p>
                   </div>
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <h3 class="panel-title text-center">{{ user.login }}</h3>
-                        <img
-                          class="img-thumbnail github-avatar"
-                          src="{{ user.avatar_url }}"
-                        />
-                      </div>
-                      <div class="col-md-8 d-flex m-auto lead">
-                        <div
-                          class="stats d-flex flex-column justify-content-evenly align-content-center"
-                        >
-                          <div>
-                            <span>Public Repos: </span>
-                            <span class="label label-default fw-bold text-info"
-                              >{{ user.public_repos }}
-                            </span>
-                            
-                          </div>
-                          <div>
-                            <span>Followers: </span>
-                            <span class="label label-success fw-bold text-info"
-                              >{{ user.followers }}
-                            </span>
-                            
-                          </div>
-                          <div>
-                            <span>Following: </span>
-                            <span class="label label-info fw-bold text-info"
-                              >{{ user.following }}
-                            </span>
-                            
-                          </div>
-                          <div>
-                            <span>Member since: </span>
-                            <span class="label label-info fw-bold text-info"
-                              >{{ user.created_at | date: "mediumDate" }}
-                            </span>
-                          </div>
-                        </div>
-                        <br />
-                      </div>
+                  <div class="col-md-3">
+                    <div>
+                      <span class="label label-default mx-2"
+                        >Watchers: {{ repo.watchers }}</span
+                      >
+                      <span class="label label-primary mx-2"
+                        >Forks: {{ repo.updated_at }} </span
+                      >
+                    </div>
+                    <div class="label label-primary mx-2">
+                      Language: {{ repo.language }}
+                    </div>
+
+                    <div class="label label-primary mx-2">
+                      Created on: {{ repo.created_at }}
                     </div>
                   </div>
                 </div>
+                <hr />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 </div>
