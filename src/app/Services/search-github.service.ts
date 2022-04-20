@@ -39,7 +39,7 @@ export class SearchGithubService {
         public_repos:number;
     }
 
-    let userUrl = 'https://api.github.com/users/'+username+'?access_token='+environment.githubApiToken;
+    let userUrl = 'https://api.github.com/users/'+username+'?order=created&sort=asc?access_token='+environment.githubApiToken;
 
     let promise = new Promise<void>((resolve,reject) =>{
       this.http.get<ApiResponse>(userUrl).toPromise().then(response => {
