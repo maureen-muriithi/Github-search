@@ -36,7 +36,7 @@ a {color: rgb(90,165,251);}
     background: rgba(17, 16, 16, 0.301) !important;
     transform-style: preserve-3d;
     transition: 0.5s;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
     /* border-top: 1px solid #ddd; */
     border-top: 1px solid rgba(255, 255, 255, 0.609);
     border-left: 1px solid rgba(255, 255, 255, 0.609);

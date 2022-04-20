@@ -6,11 +6,10 @@ body{
     margin: auto, 0;
     margin-top: 10px solid white;
     color: white;
-    width: 70%;
+    width: 80%;
     margin: auto;
     /* justify-content: center; */
     background-image: url("../assets/gitbckgrnd.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
 
 }
